@@ -60,7 +60,7 @@ class Http {
 class Test {
         public static  void main(String [] args) {
              String str = "{\"query\": { \"match_all\": {} },\"sort\": { \"timestamp\": { \"order\": \"asc\" } },\"size\": 1}";
-             String url = "http://10.154.29.191:9200/logs/_search?pretty";
+             String url = "http://192:9200/logs/_search?pretty";
 
              JSONObject jsonObject = new Http().httpPost(url,new JSONObject(str));
              System.out.println(jsonObject.toString());
